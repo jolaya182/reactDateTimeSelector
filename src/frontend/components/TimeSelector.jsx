@@ -8,14 +8,12 @@ import { useState } from 'react';
 import Week from './Week';
 import HourRow from './HourRow';
 import Title from './Title';
-// import useState from './useState';
 
 const TimeSelector = () => {
   const totalDays = ['1', '2', '3'];
   const totalHours = ['1', '2', '3', '4'];
   const [currentDay, setCurrentDay] = useState('');
   const [currentHour, setCurrentHour] = useState('');
-  //   const getNumber = useSelector();
 
   return (
     <main className="time-selector">
