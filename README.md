@@ -1,7 +1,7 @@
 # reactDateTimeSelector
 
 Client application in where your are allow to select the day and hour so that it displays what you choose on the title.
-<img src="./frontend/images/t.gif" title="t"/>
+<img src="./src/frontend/images/t.gif" title="t"/>
 
 ## to get the repo:
 
