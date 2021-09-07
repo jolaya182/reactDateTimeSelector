@@ -1,7 +1,7 @@
 @use "variables";
-html{
-    margin: 0;
-    height: 100%;
+html {
+  margin: 0;
+  height: 100%;
 }
 body {
   margin: 0;
@@ -9,12 +9,13 @@ body {
   background-color: variables.$bg;
   color: var(--text);
   font-size: 26px;
+  font-family: Arial, Helvetica sans-serif;
 }
-#root{
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#root {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 main {
@@ -35,28 +36,33 @@ button {
   user-select: none;
 }
 
-.row{
+.row {
   display: flex;
   flex-direction: row;
   flex-basis: 100%;
   flex: 1;
   width: 100%;
-    &-week {@extend .row; justify-content:space-around;}
-    &-hour {@extend .row; }
-   
+  &-week {
+    @extend .row;
+    justify-content: space-around;
+  }
+  &-hour {
+    @extend .row;
+  }
 }
 
-.row-wrapper{  
-
-    padding-top:20px;    
-    padding-bottom:80px
+.row-wrapper {
+  padding-top: 20px;
+  padding-bottom: 80px;
 }
 
-.hour{
-    display: flex;
-    flex-direction: column;
-    width:100%;
-    flex-wrap: wrap;
+.hour {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex-wrap: wrap;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .button {
@@ -68,7 +74,11 @@ button {
   width: 100%;
   margin: 5px;
   border-radius: 5px;
-  font-size:24px;
+  font-size: 24px;
+  &:hover {
+    cursor: pointer;
+    background-color: variables.$gn;
+  }
   &-on {
     @extend .button;
     background-color: variables.$gn;
@@ -80,18 +90,19 @@ button {
   }
 }
 
-.day-button{
-    height:60px;
+.day-button {
+  height: 60px;
 }
-.hour-button{
-    width:30%
+.hour-button {
+  width: 30%;
 }
 
-.title{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 100px;
-    padding-bottom: 20px;
-    font-size: 20px bold;
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 100px;
+  padding-bottom: 20px;
+  font-size: 20px;
+  font-weight: 600;
 }
