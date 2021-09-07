@@ -43,6 +43,13 @@ button {
   width: 100%;
     &-week {@extend .row; justify-content:space-around;}
     &-hour {@extend .row; }
+   
+}
+
+.row-wrapper{  
+
+    padding-top:20px;    
+    padding-bottom:80px
 }
 
 .hour{
@@ -61,6 +68,7 @@ button {
   width: 100%;
   margin: 5px;
   border-radius: 5px;
+  font-size:24px;
   &-on {
     @extend .button;
     background-color: variables.$gn;
@@ -74,4 +82,16 @@ button {
 
 .day-button{
     height:60px;
+}
+.hour-button{
+    width:30%
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px;
+    padding-bottom: 20px;
+    font-size: 20px bold;
 }

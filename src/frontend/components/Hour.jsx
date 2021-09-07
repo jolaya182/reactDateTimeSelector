@@ -14,13 +14,15 @@ const Hour = ({ hour, setCurrentHour, currentHour }) => {
     <>
       <div className="hour">Hour: {hour}</div>
       <div
-        className={`hour ${hour === currentHour ? 'button-on' : 'button-off'}`}
+        className={`hour ${
+          hour === currentHour ? 'button-on' : 'button-off'
+        } hour-button`}
         onClick={() => {
           setIsToggled(!isToggled);
           setCurrentHour(hour);
         }}
       >
-        {isToggled ? 'choose' : 'selected'}
+        {hour === currentHour ? 'selected' : 'choose'}
       </div>
     </>
   );

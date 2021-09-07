@@ -9,12 +9,11 @@ import Hour from './Hour';
 
 const HourRow = ({ totalHours, setCurrentHour, currentHour }) => {
   return (
-    <>
+    <div className="hour row-wrapper">
       {totalHours.map((hour, index) => {
         return (
-          <div className="row-hour">
+          <div key={`hour-${index}`} className="row-hour">
             <Hour
-              key={`hour-${index}`}
               hour={hour}
               setCurrentHour={setCurrentHour}
               currentHour={currentHour}
@@ -22,7 +21,7 @@ const HourRow = ({ totalHours, setCurrentHour, currentHour }) => {
           </div>
         );
       })}
-    </>
+    </div>
   );
 };
 

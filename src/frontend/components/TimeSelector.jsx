@@ -7,20 +7,19 @@
 import { useState } from 'react';
 import Week from './Week';
 import HourRow from './HourRow';
+import Title from './Title';
 // import useState from './useState';
 
 const TimeSelector = () => {
-  const totalDays = ['Day1', 'Day2', 'Day3'];
+  const totalDays = ['1', '2', '3'];
   const totalHours = ['1', '2', '3', '4'];
-  const [currentDay, setCurrentDay] = useState(null);
-  const [currentHour, setCurrentHour] = useState(null);
+  const [currentDay, setCurrentDay] = useState('');
+  const [currentHour, setCurrentHour] = useState('');
   //   const getNumber = useSelector();
 
   return (
     <main className="time-selector">
-      <section>
-        You have selected day: {currentDay}, hour {currentHour}{' '}
-      </section>
+      <Title currentDay={currentDay} currentHour={currentHour} />
       <Week
         totalDays={totalDays}
         setCurrentDay={setCurrentDay}

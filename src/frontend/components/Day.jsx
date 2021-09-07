@@ -19,7 +19,7 @@ const Day = ({ day, setCurrentDay, currentDay }) => {
         setCurrentDay(day);
       }}
     >
-      {day}
+      Day {day}
     </section>
   );
 };
