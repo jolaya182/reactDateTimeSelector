@@ -1,0 +1,77 @@
+@use "variables";
+html{
+    margin: 0;
+    height: 100%;
+}
+body {
+  margin: 0;
+  height: 100%;
+  background-color: variables.$bg;
+  color: var(--text);
+  font-size: 26px;
+}
+#root{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  font-size: 1.5rem;
+}
+
+.time-selector {
+  border: 2px solid variables.$gn;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+  flex-basis: 100%;
+  flex: 1;
+  width: 100%;
+    &-week {@extend .row; justify-content:space-around;}
+    &-hour {@extend .row; }
+}
+
+.hour{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    flex-wrap: wrap;
+}
+
+.button {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: flex;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+  margin: 5px;
+  border-radius: 5px;
+  &-on {
+    @extend .button;
+    background-color: variables.$gn;
+    color: white;
+  }
+  &-off {
+    @extend .button;
+    background-color: #cccccc;
+  }
+}
+
+.day-button{
+    height:60px;
+}
